@@ -29,4 +29,17 @@ function matchFinder(string1, string2) {
 
 
 
+function sortMaker(arr) {
+    const element1 = arr[0];
+    const element2 = arr[1];
 
+    if(element1 < 0 || element2 < 0){
+        return 'Invalid Input';
+    }
+    else if(element1 == element2){
+        return 'equal';
+    }
+    else{
+        return [Math.max(element1, element2), Math.min(element1, element2)];
+    }
+}
