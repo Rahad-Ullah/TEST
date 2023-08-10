@@ -1,4 +1,3 @@
-
 function cubeNumber(number) {
     if(typeof number != 'number'){
         return 'Please input a number';
@@ -13,7 +12,7 @@ function cubeNumber(number) {
 
 function matchFinder(string1, string2) {
     if(typeof string1 != 'string' || typeof string2 != 'string'){
-        return 'Please input a string';
+        return 'Please input string only';
     }
     else{
         let str1Lower = string1.toLowerCase();
@@ -62,4 +61,20 @@ function findAddress(obj) {
     }
     const output = prop1 + ',' + prop2 + ',' + prop3;
     return output;
+}
+
+
+
+function canPay(changeArray, totalDue) {
+    let myMoney = 0;
+    for(let i = 0; i < changeArray.length; i++){
+        let coin = changeArray[i];
+        myMoney += coin;
+    }
+    if(myMoney >= totalDue){
+        return true;
+    }
+    else{
+        return false;
+    }
 }
