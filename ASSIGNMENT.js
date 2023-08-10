@@ -43,3 +43,23 @@ function sortMaker(arr) {
         return [Math.max(element1, element2), Math.min(element1, element2)];
     }
 }
+
+
+
+function findAddress(obj) {
+    let prop1 = obj.street;
+    let prop2 = obj.house;
+    let prop3 = obj.society;
+
+    if(prop1 == undefined){
+        prop1 = '__';
+    }
+    if(prop2 == undefined){
+        prop2 = '__';
+    }
+    if(prop3 == undefined){
+        prop3 = '__';
+    }
+    const output = prop1 + ',' + prop2 + ',' + prop3;
+    return output;
+}
